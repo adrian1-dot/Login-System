@@ -1,0 +1,8 @@
+.dropdown {position: relative; display: inline-block; }
+.dropdown-content {display: none; position: absolute;  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); padding: 12px 16px; z-index: 1; background-color: beige; border:solid; border-color: green;}
+.dropdown:hover .dropdown-content {display: block;}
+.baritemanch{padding: 5px; border: solid; width: 150px; display: block; margin-top: 10px;}
+.baritemanch:hover{background-color: green;}
+.active{background-color: green; border: solid; padding: 5px; width: 150px; margin-top: 10px; display:block;}
+.menubar{border: solid; padding: 5px 15px 5px 15px; background-color: beige;}
