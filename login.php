@@ -8,8 +8,8 @@ if (!isset($_SESSION["username"])) {
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="css/loginstyle.css">
-    <link rel="stylesheet" href="css/stylesheet.css">
+    <link rel="stylesheet" href="style/loginstyle.css">
+    <link rel="stylesheet" href="style/stylesheet.css">
     <title>Login</title>
   </head>
   <body>
@@ -20,7 +20,7 @@ if (!isset($_SESSION["username"])) {
       $name = $_POST["name"];
       $pw = $_POST["password"];
       /*server connection*/
-      include 'backend/servercon.php';
+      include 'includes/servercon.php';
       $sql = "SELECT * FROM user";
       $res = $con->query($sql);
 

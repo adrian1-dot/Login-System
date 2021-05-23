@@ -1,12 +1,14 @@
-<?php session_start();
+<?php
+session_start();
 ?>
+
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="css/registerstyle.css">
-    <link rel="stylesheet" href="css/stylesheet.css">
-    <link rel="stylesheet" href="css/menustyle.css">
-    <link rel="stylesheet" href="css/logout.css">
+    <link rel="stylesheet" href="style/registerstyle.css">
+    <link rel="stylesheet" href="style/stylesheet.css">
+    <link rel="stylesheet" href="style/menustyle.css">
+    <link rel="stylesheet" href="style/logout.css">
     <title>Registration</title>
   </head>
   <body>
@@ -27,10 +29,9 @@
         $error = "The password should have a minimum of 8 Characters";}
       elseif ($pw2 != $pw) {
         $error = "Not the same passwords";}
-      /*enter user to DB*/
+      /*everything right? -> enter user to DB*/
       else {
-        /*server connection*/
-        include 'backend/servercon.php';
+        include 'includes/servercon.php';
         $pw = password_hash($pw, PASSWORD_DEFAULT);
         $sql = "INSERT INTO user(Name, EMail, Password) VALUES('$name', '$email', '$pw')";
         $con->query($sql);
